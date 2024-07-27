@@ -1,6 +1,6 @@
 import { FilterBar } from '../components/FilterBar/FilterBar';
 import styles from './SharedStyles.module.css';
-import { WellcomePage } from "../components/WellcomePage/WellcomePage";
+import { WelcomePage } from "../components/WelcomePage/WelcomePage";
 
 export const HomePage = () => {
   return <>
@@ -9,6 +9,6 @@ export const HomePage = () => {
     <aside>
       <FilterBar/>
     </aside>
-    <WellcomePage />
+    <WelcomePage />
   </div></>;
 };

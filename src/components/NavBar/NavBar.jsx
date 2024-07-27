@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import styles from "./NavBar.module.css";
 import { selectFavoritesIDs } from "../../redux/selectors";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
+// import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(styles.link, isActive && styles.active);
@@ -37,9 +37,9 @@ export const NavBar = () => {
             <span>Favorite</span>
           </NavLink>
         </li>
-        <li>
+        {/* <li>
            <ThemeToggle />
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

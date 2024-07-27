@@ -30,7 +30,8 @@ export const CamperList = () => {
 
   function handleLoadMore() {
     const newShowedVans = showedVans + 4;
-    dispatch(showMore(newShowedVans));
+
+      dispatch(showMore(newShowedVans));
     dispatch(fetchCamperList(newShowedVans));
   }
 
