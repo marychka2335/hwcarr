@@ -1,0 +1,195 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        gap: 32px;
+        width: 360px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 360px;
+    }
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+.formLocalGroup {
+    display: flex;
+    flex-direction: column;
+    height: 88px;
+    position: relative;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.locationSelect {
+    width: 100%;
+    height: 56px;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 10px;
+    padding-left: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: Inter;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: var(--main-text);
+}
+
+.locationSelect option {
+    font-family: Inter;
+    font-size: 24px;
+}
+
+.iconMap {
+    position: absolute;
+    left: 18px;
+    top: 40px;
+    fill: none;
+    stroke: var(--main-text);
+    opacity: 0.6;
+}
+
+.icon {
+    fill: none;
+    stroke: var(--main-text);
+}
+
+.iconFill {
+    fill: var(--main-text);
+}
+
+.formGroup {
+    position: relative;
+}
+
+.formGroup ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0 0 0;
+    padding: 24px 0 0 0;
+    border-top: 1px solid var(--border);
+}
+
+.radioBox,
+.checkBoxWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 105px;
+    height: 95px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.checkBoxWrapper.checked {
+    transform: scale(0.975);
+    border: 1px solid var(--button);
+    box-shadow: inset -7px -7px 11px -9px var(--button);
+}
+
+.checkBoxWrapper:hover,
+.checkBoxWrapper:focus {
+    border: 1px solid var(--rating);
+    box-shadow: inset -7px -7px 11px -9px var(--rating);
+}
+
+.checkBoxWrapper:active {
+    transform: scale(0.975);
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkBox,
+.radioBox {
+    display: none;
+}
+
+.btn {
+    padding: 16px 32px;
+    gap: 10px;
+    border-radius: 200px;
+    opacity: 0px;
+    width: 173px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    color: white;
+    background-color: var(--button);
+    border: none;
+    transform: scale(1);
+    transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        transform 0.05s ease-in-out;
+    user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+    font-weight: 700;
+}
+
+.headersWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.resetFilters {
+    background-color: var(--white);
+    border: none;
+    padding: 0;
+    color: var(--rating);
+}
+
+.resetFilters:hover,
+.resetFilters:focus {
+    color: var(--button);
+}
+
+.resetFilters:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    color: var(--main-text);
+}
