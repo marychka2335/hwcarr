@@ -33,14 +33,15 @@
     cursor: pointer;
     background-color: var(--header-color);
     border-color: var(--header-color);
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
     color: var(--main-text);
-    transition: color 0.15s ease-in-out;
+    /* transition: color 0.15s ease-in-out; */
 }
 
 @media only screen and (min-width: 375px) {
     .link {
         font-size: 10px;
+        font-weight: 600;
     }
 }
 

@@ -9,6 +9,7 @@ export const HomePage = () => {
     <aside>
       <FilterBar/>
     </aside>
-    <WelcomePage />
+      <WelcomePage />
+   
   </div></>;
 };

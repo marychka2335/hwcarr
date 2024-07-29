@@ -205,7 +205,7 @@ export const FilterForm = () => {
               onClick={handleResetFilters}
               disabled={!(Object.entries(filters).length !== 0)}
             >
-              {(Object.entries(filters).length !== 0) ? "Reset filters?" : "No active filters"}
+              {/* {(Object.entries(filters).length !== 0) ? "Reset filters?" : "No active filters"} */}
             </button>
           </div>
             

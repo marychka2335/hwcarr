@@ -11,7 +11,7 @@ import {
 import { fetchCamperList } from "../../redux/operation";
 import { showMore } from "../../redux/camperSlice";
 import { CamperListItem } from "../CamperListItem/CamperListItem";
-import logo from "../../images/camper.svg";
+import camper from "../../images/camper.jpeg";
 import styles from "./CamperList.module.css";
 
 
@@ -77,15 +77,15 @@ export const CamperList = () => {
           ) : (
             <div className={styles.infoWrapper}>
               <div className={styles.img}>
-                <img src={logo} alt="My camper"  className={styles.svg} />
+                <img src={camper} alt="My camper"  className={styles.camp} />
               </div>
                 
               <div className={styles.content}>
                 <p className={styles.info}>
-                  There is no any favorite campers yet...
+                 There are no saved favorite campers yet
                 </p>
                 <Link to="/catalog" className={styles.link}>
-                  Try to choose one!!!
+               You could choose from the variety
                 </Link>
               </div>
             </div>

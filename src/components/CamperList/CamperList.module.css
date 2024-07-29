@@ -83,15 +83,15 @@
     width: 290px;
     height: 310px;
     border-radius: 10px;
-    background-color: var(--rating);
+
 }
 
-.svg {
-    width: 200px;
-    animation: rotate-camper 6s infinite;
+.camp {
+    width: 100%;
+    /* animation: rotate-camper 6s infinite; */
 }
 
-@keyframes rotate-camper {
+/* @keyframes rotate-camper {
     0% {
         transform: rotate(0deg) scale(0.05);
     }
@@ -107,7 +107,7 @@
     100% {
         transform: rotate(360deg) scale(1);
     }
-}
+} */
 
 .content {
     display: flex;

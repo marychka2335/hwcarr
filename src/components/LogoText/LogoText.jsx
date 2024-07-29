@@ -17,7 +17,7 @@ export const LogoText = forwardRef((props, ref) => {
 
   return (
     <h2 ref={ref} className={styles.logoText}>
-      RENTAL<span className={styles.spanOf}>of</span><span className={styles.spanCamper}>CAMPER</span>
+      Campers Rental Service
     </h2>
   );
 });
