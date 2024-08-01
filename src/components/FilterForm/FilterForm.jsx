@@ -43,22 +43,36 @@ export const FilterForm = () => {
     event.currentTarget.classList.toggle(styles.checked);
   };
 
-  function resetRadio() {
-    document.getElementById("radio11").classList.remove(styles.checked);
-    document.getElementById("radio21").classList.remove(styles.checked);
-    document.getElementById("radio31").classList.remove(styles.checked);
-    const radioButtons = document.querySelectorAll(
-      'input[type="radio"][name="form"]'
-    );
-    radioButtons.forEach((button) => {
-      button.checked = false;
-    });
-  }
+  // function resetRadio() {
+  //   document.getElementById("radio11").classList.remove(styles.checked);
+  //   document.getElementById("radio21").classList.remove(styles.checked);
+  //   document.getElementById("radio31").classList.remove(styles.checked);
+  //   const radioButtons = document.querySelectorAll(
+  //     'input[type="radio"][name="form"]'
+  //   );
+  //   radioButtons.forEach((button) => {
+  //     button.checked = false;
+  //   });
+  // }
 
-  const handleChangeRadio = (event) => {
-    resetRadio();
-    event.currentTarget.classList.add(styles.checked);
-  };
+  // const handleChangeRadio = (event) => {
+  //   resetRadio();
+  //   event.currentTarget.classList.add(styles.checked);
+  // };
+  
+function resetRadio() {
+  const radioButtons = document.querySelectorAll('input[type="radio"][name="form"]');
+  radioButtons.forEach((button) => {
+    button.checked = false;
+    button.parentElement.classList.remove(styles.checked); // Оновлено для видалення класу
+  });
+}
+
+const handleChangeRadio = (event) => {
+  resetRadio();
+  event.currentTarget.checked = true; // Встановлюємо checked на true
+  event.currentTarget.parentElement.classList.add(styles.checked); // Додаємо клас
+};
 
   const handleResetFilters = () => {
     dispatch(resetFilters());
