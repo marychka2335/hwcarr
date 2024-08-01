@@ -7,12 +7,6 @@ import { resetFilters } from "../redux/camperSlice";
 
 export const FavoritesPage = () => {
   const dispatch = useDispatch()
-
-  // Видаліть useEffect, оскільки `resetFilters` не потрібна на цій сторінці:
-  // useEffect(()=>{
-  //   dispatch(resetFilters())
-  // }, [dispatch])
-  
   return (
     <div className={styles.wrapper}>
       <aside>

@@ -24,12 +24,6 @@ const camperSlice = createSlice({
     },
     toggleFavorite: (state, action) => {
       const _id = action.payload;
-      // state.campers.data = produce(state.campers.data, (draft) => {
-      //   const favoriteCamper = draft.find((camper) => camper._id === _id);
-      //   if (favoriteCamper) {
-      //     favoriteCamper.favorite = !favoriteCamper.favorite;
-      //   }
-      // });
       if (!state.favoritesIDs.includes(_id)) {
         state.favoritesIDs = [...state.favoritesIDs, _id].sort((a, b) => {
           return a - b;
@@ -53,7 +47,6 @@ const camperSlice = createSlice({
       })
       .addCase(fetchCamperList.fulfilled, (state, action) => {
         state.isLoading = false;
-        // Додайте властивість 'favorite' до кожного об'єкта campers в action.payload.data:
         state.campers.data = action.payload.data.map((camper) => ({
           ...camper,
           favorite: false, // Встановіть початкове значення в 'false'

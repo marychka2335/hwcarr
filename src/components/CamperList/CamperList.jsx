@@ -25,16 +25,21 @@ export const CamperList = () => {
   const favoriteCampers = useSelector(selectFavoritesIDs);
 
   useEffect(() => {
-    dispatch(fetchCamperList());
-  }, [dispatch]);
+  //   // dispatch(fetchCamperList());
+  // }, [dispatch]);
+dispatch(fetchCamperList(showedVans)); // Передайте showedVans до fetchCamperList
+  }, [dispatch, showedVans]);
+//  function handleLoadMore() {
+//     const newShowedVans = showedVans + 4;
 
-  function handleLoadMore() {
+//       dispatch(showMore(newShowedVans));
+//     dispatch(fetchCamperList(newShowedVans));
+//   }
+ function handleLoadMore() {
     const newShowedVans = showedVans + 4;
-
-      dispatch(showMore(newShowedVans));
-    dispatch(fetchCamperList(newShowedVans));
+    dispatch(showMore(newShowedVans)); // Оновіть showedVans в state
+    dispatch(fetchCamperList(newShowedVans)); // Передайте newShowedVans до fetchCamperList
   }
-
   return (
     <>
       {location.pathname === "/catalog" && (
